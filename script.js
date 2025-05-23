@@ -18,7 +18,7 @@ function updateCartDisplay() {
     return sum + product.price * count;
   }, 0);
   cartCount.textContent = totalItems;
-  totalDisplay.textContent = total.toFixed(2);
+ totalDisplay.textContent = total.toFixed(2) + ' CHF';
 }
 
 function addProduct(product) {
@@ -40,7 +40,7 @@ products.forEach(product => {
   card.innerHTML = `
     <img src="${product.image}" alt="${product.name}" />
     <h3>${product.name}</h3>
-    <p>$${product.price.toFixed(2)}</p>
+    <p>${product.price.toFixed(2)} CHF</p>
     <div class="button-group">
       <button onclick='removeProduct(${JSON.stringify(product)})'>-</button>
       <button onclick='addProduct(${JSON.stringify(product)})'>+</button>
