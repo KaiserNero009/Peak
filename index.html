@@ -24,20 +24,12 @@
   <button onclick="showCheckout()" class="checkout-button">Zur Kasse</button>
 </div>
   </footer>
-  <section id="checkout-form" class="checkout" style="display: none;">
-  <h2>Checkout</h2>
-  <form onsubmit="submitOrder(event)">
-    <label>
-      Name:
-      <input type="text" id="customer-name" required />
-    </label>
-    <label>
-      E-Mail:
-      <input type="email" id="customer-email" required />
-    </label>
-    <p>Gesamtbetrag: <strong id="checkout-total"></strong></p>
-    <button type="submit">Bestellung abschicken</button>
-  </form>
+  <section id="checkout-message" class="checkout" style="display: none;">
+  <h2>Vielen Dank, dass Sie Peak kaufen würden.</h2>
+  <p>Leider existiert Peak noch nicht.</p>
+  <a href="https://buy.stripe.com/28EeVc22ndEYcSjd32b3q00" target="_blank" class="donate-button">
+    Spende an 28Mz
+  </a>
 </section>
 </body>
 </html>
