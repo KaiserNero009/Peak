@@ -47,4 +47,24 @@ products.forEach(product => {
     </div>
   `;
   grid.appendChild(card);
+  function showCheckout() {
+  document.getElementById('checkout-form').style.display = 'block';
+  document.getElementById('checkout-total').textContent = 
+    new Intl.NumberFormat('de-CH', { style: 'currency', currency: 'CHF' }).format(
+      Object.entries(cart).reduce((sum, [name, count]) => {
+        const product = products.find(p => p.name === name);
+        return sum + product.price * count;
+      }, 0)
+    );
+}
+
+function submitOrder(event) {
+  event.preventDefault();
+  const name = document.getElementById('customer-name').value;
+  const email = document.getElementById('customer-email').value;
+  alert(`Vielen Dank, ${name}! Ihre Bestellung wird an ${email} gesendet.`);
+  // Reset
+  document.getElementById('checkout-form').style.display = 'none';
+}
+
 });
