@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chalklet Onlineshop</title>
+  <title>Peak Onlineshop</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -99,6 +99,27 @@
       width: 50px;
       height: auto;
     }
+    .social-icon {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.social-icon a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-icon a img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
   </style>
 </head>
 <body>
@@ -222,6 +243,13 @@
       window.location.href = "thankyou.html";
     }
   </script>
-
+<div class="social-icon">
+  <a href="https://www.instagram.com/chalklet_gmbh/" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+  </a>
+  <a href="https://www.twitch.tv/cadl09" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Twitch_logo_%28wordmark_only%29.svg" alt="Twitch" style="background-color: white; padding: 5px;" />
+  </a>
+</div>
 </body>
 </html>
