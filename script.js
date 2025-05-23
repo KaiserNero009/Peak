@@ -58,13 +58,8 @@ products.forEach(product => {
     );
 }
 
-function submitOrder(event) {
-  event.preventDefault();
-  const name = document.getElementById('customer-name').value;
-  const email = document.getElementById('customer-email').value;
-  alert(`Vielen Dank, ${name}! Ihre Bestellung wird an ${email} gesendet.`);
-  // Reset
-  document.getElementById('checkout-form').style.display = 'none';
+function showCheckout() {
+  document.getElementById('checkout-message').style.display = 'block';
 }
 
 });
