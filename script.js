@@ -1,9 +1,9 @@
 const products = [
-  { name: "Pure Peak", price: 29.99, image: "pure-peak.jpg" },
-  { name: "Adrenaline Peak", price: 34.99, image: "adrenaline-peak.jpg" },
-  { name: "Happiness Peak", price: 24.99, image: "happiness-peak.jpg" },
-  { name: "Courage Peak", price: 32.99, image: "courage-peak.jpg" },
-  { name: "Focused Peak", price: 28.99, image: "focused-peak.jpg" },
+  { name: "Pure Peak", price: 2.45, image: "pure-peak.jpg" },
+  { name: "Adrenaline Peak", price: 2.45, image: "adrenaline-peak.jpg" },
+  { name: "Happiness Peak", price: 2.45, image: "happiness-peak.jpg" },
+  { name: "Courage Peak", price: 2.45, image: "courage-peak.jpg" },
+  { name: "Focused Peak", price: 2.45, image: "focused-peak.jpg" },
 ];
 
 const cart = {};
