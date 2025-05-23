@@ -10,14 +10,12 @@
       background-color: #fffdf9;
       margin: 0;
       padding: 20px;
-      position: relative;
-      min-height: 100vh;
     }
     header {
       text-align: center;
       margin-bottom: 30px;
     }
-    header img.logo {
+    header img {
       width: 200px;
       height: auto;
     }
@@ -83,110 +81,75 @@
       margin-top: 10px;
     }
 
-    /* Social Icons unten links */
-    .social-link {
+    /* Social Links Style */
+    .social-links {
       position: fixed;
-      bottom: 10px;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       z-index: 1000;
     }
-    .twitch-link {
-      left: 10px;
-    }
-    .insta-link {
-      left: 70px;
-    }
-    .social-link img {
-      width: 50px;
-      height: auto;
-    }
-    .social-icon {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
-}
 
-.social-icon a img {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .social-links img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
 
-.social-icon a img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
+    .social-links img:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Social Media Icons -->
-  <a href="https://www.twitch.tv/cadl09" target="_blank" class="social-link twitch-link">
-    <img src="https://static.vecteezy.com/system/resources/previews/018/930/502/original/twitch-logo-twitch-icon-transparent-free-png.png" alt="Twitch">
-  </a>
-  <a href="https://www.instagram.com/peak_chocolate_company/?igsh=d3Z0NHBoNjA2YW90" target="_blank" class="social-link insta-link">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-  </a>
-
   <header>
-    <img src="https://i.imgur.com/dmZqREu.png" alt="Chalklet Logo" class="logo"/>
-    <h1>for you, from us, for everyone</h1>
+    <img src="https://i.imgur.com/3EbDo4j.png" alt="Chalklet Logo" />
+    <h1>Zum Schreiben zu schade, zum Naschen perfekt.</h1>
   </header>
 
   <section class="produkt-container">
+    <!-- Classic groß -->
     <div class="produkt">
-      <img src="https://i.imgur.com/knVUDtA.png" alt="Pure Peak" />
-      <h3>Pure Peak </h3>
+      <img src="https://i.imgur.com/LR8sat1.png" alt="Classic groß" />
+      <h3>Chalklet Classic – 150g</h3>
       <p>Milchschokolade</p>
-      <p><strong>2.45 CHF</strong></p>
-      <button onclick="addToCart('Pure Peak ', 2.45)">In den Warenkorb</button>
+      <p><strong>3.50 CHF</strong></p>
+      <button onclick="addToCart('Classic 150g', 3.5)">In den Warenkorb</button>
     </div>
-  </section>
 
-  <section class="produkt-container">
+    <!-- Classic klein -->
     <div class="produkt">
-      <img src="https://i.imgur.com/WHHVrHk.png" alt="Adrenaline Peak" />
-      <h3>Adrenaline Peak </h3>
-      <p>Latte Macchiato</p>
-      <p><strong>2.45 CHF</strong></p>
-      <button onclick="addToCart('Adrenaline Peak ', 2.45)">In den Warenkorb</button>
+      <img src="https://i.imgur.com/rin0TzF.png" alt="Classic klein" />
+      <h3>Chalklet Classic – 55g</h3>
+      <p>Milchschokolade</p>
+      <p><strong>1.25 CHF</strong></p>
+      <button onclick="addToCart('Classic 55g', 1.25)">In den Warenkorb</button>
     </div>
-  </section>
 
-  <section class="produkt-container">
+    <!-- Monatsedition groß -->
     <div class="produkt">
-      <img src="https://i.imgur.com/XfAR7n7.png" alt="Focused Peak" />
-      <h3>Focused Peak </h3>
-      <p>Honey & Walnut</p>
-      <p><strong>2.45 CHF</strong></p>
-      <button onclick="addToCart('Focused Peak ', 2.45)">In den Warenkorb</button>
+      <img src="https://i.imgur.com/ZNT0HKK.png" alt="Edition groß" />
+      <h3>Monatsedition – 150g</h3>
+      <p><em>z. B. Himbeere, Zimt, Chili…</em></p>
+      <p><strong>4.00 CHF</strong></p>
+      <button onclick="addToCart('Edition 150g', 4)">In den Warenkorb</button>
     </div>
-  </section>
 
-  <section class="produkt-container">
+    <!-- Monatsedition klein -->
     <div class="produkt">
-      <img src="https://i.imgur.com/JJ8C0in.png" alt="Courage Peak" />
-      <h3>Courage Peak </h3>
-      <p>Dark Chocolate & Roasted Almonds</p>
-      <p><strong>2.45 CHF</strong></p>
-      <button onclick="addToCart('Courage Peak ', 2.45)">In den Warenkorb</button>
+      <img src="https://i.imgur.com/e9XFs4p.png" alt="Edition klein" />
+      <h3>Monatsedition – 55g</h3>
+      <p><em>z. B. Himbeere, Zimt, Chili…</em></p>
+      <p><strong>1.75 CHF</strong></p>
+      <button onclick="addToCart('Edition 55g', 1.75)">In den Warenkorb</button>
     </div>
   </section>
 
-  <section class="produkt-container">
-    <div class="produkt">
-      <img src="https://i.imgur.com/MX4IOCj.png" alt="Happiness Peak" />
-      <h3>Happiness Peak </h3>
-      <p>Salted Caramel</p>
-      <p><strong>2.45 CHF</strong></p>
-      <button onclick="addToCart('Happiness Peak ', 2.45)">In den Warenkorb</button>
-    </div>
-  </section>
-
+  <!-- Warenkorb -->
   <div class="warenkorb">
     <h2>🛒 Warenkorb</h2>
     <div id="cartItems"></div>
@@ -195,10 +158,23 @@
       <a href="https://buy.stripe.com/28EeVc22ndEYcSjd32b3q00" target="_blank">
         <button>Spenden</button>
       </a>
+    </div>
+    <div style="text-align: right; margin-top: 15px;">
       <button onclick="goToThankYou()">Jetzt kaufen</button>
     </div>
   </div>
 
+  <!-- Social Media Links -->
+  <div class="social-links">
+    <a href="https://www.twitch.tv/cadl09" target="_blank" title="Twitch">
+      <img src="https://static.vecteezy.com/system/resources/previews/018/930/502/original/twitch-logo-twitch-icon-transparent-free-png.png" alt="Twitch Icon" />
+    </a>
+    <a href="https://www.instagram.com/chalklet_gmbh/" target="_blank" title="Instagram">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" />
+    </a>
+  </div>
+
+  <!-- Script für Warenkorb -->
   <script>
     const cart = [];
 
@@ -243,13 +219,5 @@
       window.location.href = "thankyou.html";
     }
   </script>
-<div class="social-icon">
-  <a href="https://www.instagram.com/chalklet_gmbh/" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-  </a>
-  <a href="https://www.twitch.tv/cadl09" target="_blank">
-    <img src="https://static.vecteezy.com/system/resources/previews/018/930/502/original/twitch-logo-twitch-icon-transparent-free-png.png" alt="Twitch" />
-  </a>
-</div>
 </body>
 </html>
