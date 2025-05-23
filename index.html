@@ -20,6 +20,24 @@
 
   <footer class="footer">
     Total: $<span id="total">0.00</span>
+    <div style="text-align: right; margin-top: 10px;">
+  <button onclick="showCheckout()" class="checkout-button">Zur Kasse</button>
+</div>
   </footer>
+  <section id="checkout-form" class="checkout" style="display: none;">
+  <h2>Checkout</h2>
+  <form onsubmit="submitOrder(event)">
+    <label>
+      Name:
+      <input type="text" id="customer-name" required />
+    </label>
+    <label>
+      E-Mail:
+      <input type="email" id="customer-email" required />
+    </label>
+    <p>Gesamtbetrag: <strong id="checkout-total"></strong></p>
+    <button type="submit">Bestellung abschicken</button>
+  </form>
+</section>
 </body>
 </html>
